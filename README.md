@@ -4,7 +4,7 @@
 
 #### HumanTokenAllocator
 
-Contract that issues Human Tokens
+The contract that issues Human Tokens
 
 **Contstructor**
 ```cs
@@ -153,26 +153,26 @@ Get balance of tokens holder
 ```cs
 function transfer(address _to, uint _amount) public returns (bool)
 ```
-Send coins throws on any error rather then return a false flag to minimize user errors
+Send coins throws on any error rather than return a false flag to minimize user errors
 
 **transferFrom**
 ```cs
 function transferFrom(address _from, address _to, uint _amount) public returns (bool)
 ```
-An account/contract attempts to get the coins throws on any error rather then return a false flag to minimize user errors
+An account/contract attempts to get the coins. Throws on any error rather than return a false flag to minimize user errors
 
 **approve**
 ```cs
 function approve(address _spender, uint _amount) public returns (bool)
 ```
-Allows another account/contract to spend some tokens on its behalf throws on any error rather then return a false flag to minimize user errors also, to minimize the risk of the approve/transferFrom attack vector approve has to be called twice in 2 separate transactions - once to
+Allows another account/contract to spend some tokens on its behalf throws on any error rather than return a false flag to minimize user errors also, to minimize the risk of the approve/transferFrom attack vector approve has to be called twice in 2 separate transactions - once to
 change the allowance to 0 and secondly to change it to the new allowance value
 
 **allowance**
 ```cs
 function allowance(address _owner, address _spender) constant returns (uint)
 ```
-Function to check the amount of tokens that an owner allowed to a spender.
+Function to check the number of tokens that an owner allowed to a spender.
 
 **transferAnyTokens**
 ```cs
@@ -206,7 +206,7 @@ Function that starts fundraising.
 ```cs
 function startEvaluating() public onlyOwner
 ```
-Function that sets status of contract to "Evaluating" if soft cap is raised or failed otherwise.
+The function that sets the status of the contract to "Evaluating" if the soft cap is raised or failed otherwise.
 
 **startVoting**
 ```cs
@@ -218,13 +218,13 @@ Function that starts voting if contract status is "Evaluating"
 ```cs
 function finish() public onlyOwner
 ```
-Function that finishes voting and sets contract status to: "Finished", if voting was successful or "Failed" otherwise.
+The function that finishes voting and sets contract status to: "Finished", if voting was successful or "Failed" otherwise.
 
 **claim**
 ```cs
 function claim() public
 ```
-Function that allows to claim tokens back.
+The function that allows claiming tokens back.
 
 **vote**
 ```cs
@@ -242,7 +242,7 @@ Function to donate for event.
 ```cs
 function  withdraw() external onlyOwner
 ```
-Function for owner to withdraw raised funds from event.
+Function for the owner to withdraw raised funds from the event.
 
 
 ## Prerequisites
